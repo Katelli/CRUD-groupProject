@@ -1,0 +1,6 @@
+@CRUD_groupProject_HostAddress = http://localhost:5201
+
+GET {{CRUD_groupProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
