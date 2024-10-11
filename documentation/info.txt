@@ -1,0 +1,3 @@
+Denne tekstfilen kommer til å slettes senere, bare bruker den til å informere om at
+mappen "documentation" brukes til å legge inn bilder av skisse/design/modeller
+som vi har laget for oppgaven (som figma, excalidraw)
