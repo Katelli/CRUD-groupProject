@@ -1,15 +1,19 @@
 * {
-  background-image: image();
   width: 100%;
   justify-items: center;
   margin: auto;
   align-items: center;
+  background-color: yellow;
 }
 
 header {
   display: flex;
   justify-content: center;
-  padding: 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
 }
 
 .italianno-regular {
@@ -19,6 +23,7 @@ header {
 }
 
 header {
+  margin-top: auto;
   font-style: normal;
   font-size: 64px;
   text-align: center;
@@ -30,26 +35,70 @@ header {
   width: 100%;
 }
 form {
+  display: flex;
+  justify-content: center;
 }
 
 input {
   width: 350px;
   height: 70px;
-  background-color: yellow;
+  border: 5px;
   border-radius: 17px;
   border-bottom: 0px;
   border-color: #c4b100;
   border-style: solid;
+  background-color: #fcff54;
   transform: background-color 0.15s;
   font-size: 35px;
   text-align: center;
   outline: none;
-  margin: auto;
+  margin: none;
+  font-family: italianno;
+  letter-spacing: 5px;
 }
 input:hover {
-  background-color: #fcff54;
+  background-color: #fdff82;
 }
 
 input:action {
   background-color: #fcff54;
+}
+
+#container {
+  display: flex;
+  columns: row;
+  position: relative;
+  padding: 15px 0px;
+}
+
+label {
+  display: flex;
+  padding: 10px;
+  height: 30px;
+  width: 200px;
+  border-color: #c4b100;
+  background-color: #fcff54;
+  border-radius: 25px;
+  border-width: 5px;
+  border-style: solid;
+  align-items: end;
+  justify-content: end;
+  position: relative;
+}
+
+button {
+  position: absolute;
+  right: 10;
+  align-self: center;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #c4b100;
+  transition: background-color 0.15;
+}
+
+button:action {
+  background-color: green;
 }
