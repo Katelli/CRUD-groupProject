@@ -2,6 +2,6 @@ import * as todoAPI from "./todo-api.js";
 
 console.log("Todo List Loaded");
 
-const todoes = await todoAPI.getAllTodoes();
+const todos = await todoAPI.getAllTodos();
 
-console.log(todoes);
+console.log(todos);
