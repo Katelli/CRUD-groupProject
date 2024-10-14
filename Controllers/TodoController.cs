@@ -1,6 +1,6 @@
 /*
 [ApiController]
-[Route("todo")]
+[Route("Todo")]
 
 public class TodoController : ControllerBase
 
@@ -19,21 +19,21 @@ public class TodoController : ControllerBase
     }
 
     Read (get by id)
-    [HttpGet("{id}")]
+    [HttpGet("{id:guid}")]
     public Method?
     {
         Code Logic
     }
 
     Update
-    [HttpPut("{id}")]
+    [HttpPut("{id:guid}")]
     public Method?
     {
         Code Logic
     }
 
     Delete
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:guid}")]
     public Method?
     {
         Code Logic
