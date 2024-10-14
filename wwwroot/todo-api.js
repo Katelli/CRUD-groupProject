@@ -1,11 +1,10 @@
 console.log("Todo API Module Loaded");
 
-const apiVersion = "/api/v1";
-const url = apiVersion;
+const url = "/";
 
-async function fetchWrapper(adress, init) {
+async function fetchWrapper(adress) {
   try {
-    const response = await fetch(adress, init);
+    const response = await fetch(adress);
 
     if (!response.ok) {
       return false;
@@ -23,7 +22,7 @@ async function fetchWrapper(adress, init) {
 //      API Wrappers
 // Create
 export async function createTodo(todo) {
-  return fetchWrapper(url + "/todoes/", {
+  return fetchWrapper(url + "todos/", {
     method: "Post",
     headers: {
       "Content-Type": "/application.json",
@@ -34,7 +33,7 @@ export async function createTodo(todo) {
 
 // Update
 export async function updateTodo(id, todo) {
-  return fetchWrapper(url + "/todoes/" + id, {
+  return fetchWrapper(url + "todos/" + id, {
     method: "Put",
     headers: {
       "Content-Type": "/application.json",
@@ -45,16 +44,26 @@ export async function updateTodo(id, todo) {
 
 // Delete
 export async function deleteTodo(id) {
-  return fetchWrapper(url + "/todoes/" + id, {
+  return fetchWrapper(url + "todos/" + id, {
     method: "Delete",
   });
 }
 
 // Read
-export async function getAllTodoes() {
-  return fetchWrapper(url + "/todoes/");
+export async function getAllTodos() {
+  return fetchWrapper(url + "todos/", {
+    method: "Get",
+    headers: {
+      "Content-Type": "/application.json",
+    },
+  });
 }
 
 export async function getTodo(id) {
-  return fetchWrapper(url + "/todoes/" + id);
+  return fetchWrapper(url + "todos/" + id, {
+    method: "Get",
+    headers: {
+      "Content-Type": "/application.json",
+    },
+  });
 }
