@@ -99,6 +99,6 @@ button {
   transition: background-color 0.15;
 }
 
-button:action {
-  background-color: green;
+#add {
+  display: none;
 }
