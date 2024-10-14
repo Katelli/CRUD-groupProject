@@ -38,7 +38,7 @@ function createTodo(title) {
 }
 
 function handleAddTodo() {
-  inputValue = inputField.value;
+  const inputValue = inputField.value;
 
   const newList = createTodo(inputValue);
 

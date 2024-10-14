@@ -51,19 +51,9 @@ export async function deleteTodo(id) {
 
 // Read
 export async function getAllTodos() {
-  return fetchWrapper(url + "todos/", {
-    method: "Get",
-    headers: {
-      "Content-Type": "/application.json",
-    },
-  });
+  return fetchWrapper(url + "todos/");
 }
 
 export async function getTodo(id) {
-  return fetchWrapper(url + "todos/" + id, {
-    method: "Get",
-    headers: {
-      "Content-Type": "/application.json",
-    },
-  });
+  return fetchWrapper(url + "todos/" + id);
 }
